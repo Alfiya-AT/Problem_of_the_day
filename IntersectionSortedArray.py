@@ -4,7 +4,7 @@ def intersection(arr1,arr2):
     while i<len(arr1) and j<len(arr2):
         if arr1[i]==arr2[j]:
             res.append(arr1[i])
-
+            
             while i<len(arr1)-1 and arr1[i]==arr1[i+1] :
                 i+=1
             while j<len(arr2)-1 and arr2[j]==arr2[j+1] :
