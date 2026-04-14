@@ -10,7 +10,6 @@ def LengthEncoding(s):
             j+=1
         i=j
         ans+=str(cnt)
-
     return ans
 
 s = 'abbbcdddd'
