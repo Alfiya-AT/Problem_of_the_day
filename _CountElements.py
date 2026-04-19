@@ -1,22 +1,18 @@
 def CountElements(a,b,n,query,q):
-    cnt=0
-    p=0
     res=[]
-    for i in a:
+    for i in query:
+        print("i",i)
+        val1=list(a)[i]
+        print(f"val=> {val1}")
         cnt=0
         for j in b:
-            if j<=i:
+            print(j)
+            if j<=val1:
                 cnt+=1
+                print(f"cnt{cnt}")
+        print()    
         res.append(cnt)
-        p+=1
-        if p==q:
-            break
-
-
     return res
-
-
-
 
 n = 3
 a= {4,1,2}
