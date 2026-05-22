@@ -1,25 +1,28 @@
-def CountElements(a,b,n,query,q):
-    res=[]
+from bisect import bisect_right
+
+def CountElements(a, b, n, query, q):
+
+    result = []
+
+    b.sort()
+
     for i in query:
-        print("i",i)
-        val1=list(a)[i]
-        print(f"val=> {val1}")
-        cnt=0
-        for j in b:
-            print(j)
-            if j<=val1:
-                cnt+=1
-                print(f"cnt{cnt}")
-        print()    
-        res.append(cnt)
-    return res
+
+        cnt = bisect_right(b, a[i])
+
+        result.append(cnt)
+
+    return result
+
 
 n = 3
-a= {4,1,2}
-b= {1,7,3}
+
+a = [4,1,2]
+
+b = [1,7,3]
+
+query = [0,1]
+
 q = 2
-query= {0,1}
-# Output : 
-# 2
-# 1
+
 print(CountElements(a,b,n,query,q))
